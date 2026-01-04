@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Health Screening</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h2>Community Health Screening Tool</h2>
+
+    <p class="disclaimer">
+      <strong>Disclaimer:</strong> This tool is for educational purposes only.
+    </p>
+
+    <form method="post" action="/result">
+      Name: <input type="text" name="name" required /><br /><br />
+
+      Age: <input type="number" name="age" required /><br /><br />
+
+      Temperature (°C):
+      <input type="number" step="0.1" name="temperature" required /><br /><br />
+
+      Days unwell:
+      <input type="number" name="days_unwell" required /><br /><br />
+
+      Cough:
+      <select name="cough">
+        <option value="empty"></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option></select
+      ><br /><br />
+
+      Breathing difficulty:
+      <select name="breathing_difficulty">
+        <option value="empty"></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option></select
+      ><br /><br />
+
+      Chest pain:
+      <select name="chest_pain">
+        <option value="empty"></option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option></select
+      ><br /><br />
+
+      <button type="submit">Screen</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Screening Result</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h2>Screening Result</h2>
+
+    <p class="disclaimer">
+      <strong>Disclaimer:</strong> This result is not a medical diagnosis.
+    </p>
+    <div class="result-box">
+      <p>Name: {{ name }}</p>
+      <p>Total Score: {{ score }}</p>
+      <p>Risk Level: <strong>{{ risk_level }}</strong></p>
+
+      <a href="/">Screen another person</a>
+    </div>
+  </body>
+</html>
